@@ -9,11 +9,12 @@ public class TrainSensorTest {
 
     @Before
     public void before() {
-        // TODO Add initializations
+        System.out.println("Teszt eleje");
     }
 
     @Test
     public void ThisIsAnExampleTestStub() {
         // TODO Delete this and add test cases based on the issues
+	System.out.println("Teszt közben");
     }
 }
