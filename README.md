@@ -1,6 +1,6 @@
 # verification-lab
 
-This is a *sample* application for the verification laboratory.
+This is a *sample* application **for** the verification laboratory.
 
 ## Overview
 
