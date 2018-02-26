@@ -7,13 +7,16 @@ import static org.mockito.Mockito.*;
 
 public class TrainSensorTest {
 
+    Tachograph tachograph;
+
     @Before
     public void before() {
+        tachograph = new Tachograph();
+        tachograph.addElement();
     }
 
     @Test
     public void ThisIsAnExampleTestStub() {
-        // TODO Delete this and add test cases based on the issues
-	assertTrue(false);
+        Assert.assertEquals(1, tachograph.getCount());
     }
 }
