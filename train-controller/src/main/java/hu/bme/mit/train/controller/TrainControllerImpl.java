@@ -2,11 +2,29 @@ package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
 
+import static java.lang.Thread.sleep;
+
 public class TrainControllerImpl implements TrainController {
 
 	private int step = 20;
 	private int referenceSpeed = 0;
 	private int speedLimit = 50;
+
+	private Thread thread;
+
+	TrainControllerImpl(){
+		thread=new Thread() {
+			public void run() {
+				thread.start();
+				try {
+					followSpeed();
+					sleep(500);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		};
+	}
 
 	@Override
 	public void followSpeed() {
